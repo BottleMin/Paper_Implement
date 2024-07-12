@@ -1,1 +1,1 @@
-# Retrieval-Augmented Generationb
+# Retrieval-Augmented Generation
