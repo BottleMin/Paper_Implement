@@ -1,7 +1,6 @@
 import os
 import datasets
 import faiss
-from rouge_score import rouge_scorer, scoring
 import numpy as np
 import torch
 import torch.nn.functional as F
