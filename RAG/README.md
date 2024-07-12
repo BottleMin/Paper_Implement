@@ -1,5 +1,4 @@
 # Retrieval-Augmented Generation (RAG)
----
 
 This project implements and experiments with the Retrieval-Augmented Generation (RAG) model, which combines features of Open Domain Question Answering (ODQA) and Knowledge Intensive Tasks (KIT). RAG enhances the accuracy and reliability of generated answers by integrating ODQA and KIT characteristics.
 
