@@ -15,6 +15,3 @@ To set up the project, follow these steps:
 pip install -r requirements.txt
 ```
 
----
-
-This README provides a clear explanation of the project's purpose and installation process. Adjust the details to fit your project's requirements and include additional information as needed. If you need further assistance or have questions, feel free to ask!
