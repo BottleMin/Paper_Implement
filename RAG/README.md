@@ -57,9 +57,9 @@ Introduced by Facebook AI Research in 2020, the RAG model combines ODQA and KIT 
 ### Detailed Structure
 
 - **Likelihood Probability**: The likelihood probability of generating an answer given a question, Paq, is maximized using a latent passage variable p.
-- **Equation**: $maxPaq=maxPapq=maxPapq×Ppq$
-  - **Reader**: Handles Papq.
-  - **Retriever**: Handles Ppq.
+- **Equation**: $\max{P(a \mid q)}=\max P(a,p \mid q) = \max P(a \mid p,q)×P(p, q)$
+  - **Reader**: Handles P(a \mid p,q).
+  - **Retriever**: Handles P(p,q).
 
 RAG uses a generator (BART) for answer generation and Dense Passage Retrieval (DPR) for retrieval. The model has two main variants:
 
@@ -76,7 +76,7 @@ RAG uses a generator (BART) for answer generation and Dense Passage Retrieval (D
 
 ### Retriever: DPR
 
-- **Equation**: pηzx∝expdz⊤qx dz=BERTdz qx=BERTqx
+- **Equation**: $p_η(z \mid x) ∝ \exp(d(z)^⊤q(x)) d(z)=BERT_d(z) q(x)=BERT_d(x)$
 - **Description**: Uses dense vector representations for embeddings, providing compact information about documents.
 - **Advantages**: Offers more accurate answers by leveraging dense vector space instead of traditional sparse vector models like TF-IDF and BM25.
 
