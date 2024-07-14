@@ -90,8 +90,7 @@ $$
 
 RAG combines non-parametric and parametric approaches, using BART for generating answers and DPR for effective retrieval, allowing it to address a broader range of questions, including those not covered by existing data.
 
-# Retrieval-Augmented Generation (RAG)
-
+# Code Implement
 This project implements and experiments with the Retrieval-Augmented Generation (RAG) model, which combines features of Open Domain Question Answering (ODQA) and Knowledge Intensive Tasks (KIT). RAG enhances the accuracy and reliability of generated answers by integrating ODQA and KIT characteristics.
 
 ## Introduction
