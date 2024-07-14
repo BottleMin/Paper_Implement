@@ -57,7 +57,7 @@ Introduced by Facebook AI Research in 2020, the RAG model combines ODQA and KIT 
 ### Detailed Structure
 
 - **Likelihood Probability**: The likelihood probability of generating an answer given a question, Paq, is maximized using a latent passage variable p.
-- **Equation**: maxPaq=maxPapq=maxPapq×Ppq
+- **Equation**: $maxPaq=maxPapq=maxPapq×Ppq$
   - **Reader**: Handles Papq.
   - **Retriever**: Handles Ppq.
 
