@@ -43,4 +43,22 @@ Additional finetuning steps:
 - Conducted end-to-end (e2e) evaluation.
 - F1 scores were calculated for the downstream task.
 
-This README file provides a detailed overview of the project setup, finetuning, and evaluation processes. For more information, refer to the respective notebooks and scripts included in the repository.
+## Simulation Result
+
+| Question                                         | Predicted Answer                                                                                                                               | Gold Answer                                                     |
+|--------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------|
+| When was the peak to peak gondola built          | executive Europe send actions Europe soon Europe asking send actions Europe soon Europe asking send actions Europe soon Europe send actions... | in 2007 and 2008                                                |
+| Who starred in an officer and a gentleman        | executive Europe send actions Europe soon Europe asking send actions Europe soon Europe asking send actions Europe soon Europe send actions... | Louis Gossett Jr., Debra Winger, Richard Gere, Phillip J. Salmon, David Keith, Louis Gossett Jr. |
+| Who starred in the movie on golden pond          | executive Europe send actions Europe soon Europe asking send actions Europe soon Europe asking send actions Europe soon Europe send actions... | William Lanteau, Christopher Rydell, Katharine Hepburn, Jane Fonda, Doug McKeon, Henry Fonda, Dabney Coleman |
+
+- The predicted answers are nonsensical and incorrect.
+
+F1 score: 0
+
+## Why Did the Prediction Performance Suffer?
+
+- Excessive memory savings during finetuning.
+- Performance limitations of the Colab environment.
+  - Limited training performance due to sampling 10,000 documents from the .tsv file.
+
+We plan to conduct additional experiments to improve the performance of the RAG model.
