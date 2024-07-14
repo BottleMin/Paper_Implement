@@ -64,12 +64,22 @@ Introduced by Facebook AI Research in 2020, the RAG model combines ODQA and KIT 
 RAG uses a generator (BART) for answer generation and Dense Passage Retrieval (DPR) for retrieval. The model has two main variants:
 
 ### RAG-Sequence Model
-
+$$
+\begin{equation}
+p_{\text{RAG-Sequence}}(y \mid x) \approx \sum_{z \in \text{top-k}(p(\cdot \mid x))} p_{\eta}(z \mid x)p_{\theta}(y \mid x, z)
+\end{equation} 
+\begin{equation}
+= \sum_{z \in \text{top-k}(p(\cdot \mid x))} p_{\eta}(z \mid x) \prod_{i}^{N} p_{\theta}(y_i \mid x, z, y_{1:i-1})
+\end{equation} $$
 - **Description**: Considers the entire sequence when predicting the next token, referring to the retrieved passages.
 - **Advantages**: Simpler and computationally efficient, maintaining consistency by sharing the same context across all tokens.
 
 ### RAG-Token Model
-
+$$
+\begin{equation}
+P(y \mid x) = \prod_{i}^{N} \sum_{z \in \text{top-k}(p(\cdot \mid x))} p_{\eta}(z \mid x)p_{\theta}(y_i \mid x, z, y_{1:i-1})
+\end{equation}
+$$
 - **Description**: Considers each token independently when predicting the next token, referring to the retrieved passages.
 - **Advantages**: More flexible, allowing richer and more accurate answers by gathering information from various documents.
 - **Disadvantages**: More computationally intensive and complex.
