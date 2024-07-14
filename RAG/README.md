@@ -67,8 +67,6 @@ RAG uses a generator (BART) for answer generation and Dense Passage Retrieval (D
 $$
 \begin{equation}
 p_{\text{RAG-Sequence}}(y \mid x) \approx \sum_{z \in \text{top-k}(p(\cdot \mid x))} p_{\eta}(z \mid x)p_{\theta}(y \mid x, z)
-\end{equation} 
-\begin{equation}
 = \sum_{z \in \text{top-k}(p(\cdot \mid x))} p_{\eta}(z \mid x) \prod_{i}^{N} p_{\theta}(y_i \mid x, z, y_{1:i-1})
 \end{equation} $$
 - **Description**: Considers the entire sequence when predicting the next token, referring to the retrieved passages.
